@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuy", "GameGuy\GameGuy.csproj", "{9D80B809-826B-4622-923D-56DCE618AE19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGInterpreter", "GGInterpreter\GGInterpreter.csproj", "{31419339-D0CD-4703-86AF-08D85E6E872D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGEncryptApp", "GGEncryptApp\GGEncryptApp.csproj", "{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGCrypt", "GGCrypt\GGCrypt.csproj", "{637BAC55-D0C4-4063-99BB-61738819F423}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D80B809-826B-4622-923D-56DCE618AE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D80B809-826B-4622-923D-56DCE618AE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D80B809-826B-4622-923D-56DCE618AE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D80B809-826B-4622-923D-56DCE618AE19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31419339-D0CD-4703-86AF-08D85E6E872D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31419339-D0CD-4703-86AF-08D85E6E872D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31419339-D0CD-4703-86AF-08D85E6E872D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31419339-D0CD-4703-86AF-08D85E6E872D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637BAC55-D0C4-4063-99BB-61738819F423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637BAC55-D0C4-4063-99BB-61738819F423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637BAC55-D0C4-4063-99BB-61738819F423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637BAC55-D0C4-4063-99BB-61738819F423}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
