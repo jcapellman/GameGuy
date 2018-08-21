@@ -1,6 +1,5 @@
 ﻿using System.IO;
-
-using GGCrypt;
+using GameGuy.GGCrypt;
 
 namespace GGEncrypt2 {
     class Program {

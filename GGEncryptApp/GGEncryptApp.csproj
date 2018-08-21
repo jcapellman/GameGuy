@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GGEncrypt</RootNamespace>
     <AssemblyName>GGEncrypt</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -82,9 +82,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GGCrypt\GGCrypt.csproj">
-      <Project>{637bac55-d0c4-4063-99bb-61738819f423}</Project>
-      <Name>GGCrypt</Name>
+    <ProjectReference Include="..\GameGuy.GGCrypt\GameGuy.GGCrypt.csproj">
+      <Project>{1E540991-AB72-4CF6-B569-C2D3619C3AC8}</Project>
+      <Name>GameGuy.GGCrypt</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

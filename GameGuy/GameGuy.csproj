@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameGuy</RootNamespace>
     <AssemblyName>gameGUY</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -111,9 +111,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GGInterpreter\GGInterpreter.csproj">
-      <Project>{31419339-D0CD-4703-86AF-08D85E6E872D}</Project>
-      <Name>GGInterpreter</Name>
+    <ProjectReference Include="..\GameGuy.GGCrypt\GameGuy.GGCrypt.csproj">
+      <Project>{1e540991-ab72-4cf6-b569-c2d3619c3ac8}</Project>
+      <Name>GameGuy.GGCrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameGuy.GGInterpreter\GameGuy.GGInterpreter.csproj">
+      <Project>{7ff8d829-f8bb-462a-9a58-9876321f52f9}</Project>
+      <Name>GameGuy.GGInterpreter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

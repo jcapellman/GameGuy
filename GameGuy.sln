@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27924.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuy", "GameGuy\GameGuy.csproj", "{9D80B809-826B-4622-923D-56DCE618AE19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGInterpreter", "GGInterpreter\GGInterpreter.csproj", "{31419339-D0CD-4703-86AF-08D85E6E872D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGEncryptApp", "GGEncryptApp\GGEncryptApp.csproj", "{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGCrypt", "GGCrypt\GGCrypt.csproj", "{637BAC55-D0C4-4063-99BB-61738819F423}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuy.GGCrypt", "GameGuy.GGCrypt\GameGuy.GGCrypt.csproj", "{1E540991-AB72-4CF6-B569-C2D3619C3AC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGuy.GGInterpreter", "GameGuy.GGInterpreter\GameGuy.GGInterpreter.csproj", "{7FF8D829-F8BB-462A-9A58-9876321F52F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,20 +21,23 @@ Global
 		{9D80B809-826B-4622-923D-56DCE618AE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D80B809-826B-4622-923D-56DCE618AE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D80B809-826B-4622-923D-56DCE618AE19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31419339-D0CD-4703-86AF-08D85E6E872D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31419339-D0CD-4703-86AF-08D85E6E872D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31419339-D0CD-4703-86AF-08D85E6E872D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31419339-D0CD-4703-86AF-08D85E6E872D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFD2F7E7-63D6-4479-9527-FAC0D0B8F560}.Release|Any CPU.Build.0 = Release|Any CPU
-		{637BAC55-D0C4-4063-99BB-61738819F423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{637BAC55-D0C4-4063-99BB-61738819F423}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{637BAC55-D0C4-4063-99BB-61738819F423}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{637BAC55-D0C4-4063-99BB-61738819F423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E540991-AB72-4CF6-B569-C2D3619C3AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E540991-AB72-4CF6-B569-C2D3619C3AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E540991-AB72-4CF6-B569-C2D3619C3AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E540991-AB72-4CF6-B569-C2D3619C3AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF8D829-F8BB-462A-9A58-9876321F52F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF8D829-F8BB-462A-9A58-9876321F52F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF8D829-F8BB-462A-9A58-9876321F52F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF8D829-F8BB-462A-9A58-9876321F52F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7285B27-D9D6-424B-9E63-44F9EDF397CB}
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,8 @@
-﻿using System.Text;
-using System.IO;
+﻿using System.IO;
 using System.Security.Cryptography;
+using System.Text;
 
-namespace GGCrypt {
+namespace GameGuy.GGCrypt {
     public class Encrypt {
         private DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
         private ICryptoTransform desencrypt;

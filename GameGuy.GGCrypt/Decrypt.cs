@@ -1,10 +1,10 @@
-﻿using System.Text;
-using System.IO;
+﻿using System.IO;
 using System.Security.Cryptography;
+using System.Text;
 
-namespace GGCrypt {
+namespace GameGuy.GGCrypt {
     public class Decrypt {
-        static public string decryptFile(string sInputFilename, string sKey) {
+        public static string decryptFile(string sInputFilename, string sKey) {
             DESCryptoServiceProvider DES = new DESCryptoServiceProvider();
 
             DES.Key = ASCIIEncoding.ASCII.GetBytes(sKey);

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-using GGCrypt;
+using GameGuy.GGCrypt;
 
 namespace GameGUY {
     public class GGInterpreter {
