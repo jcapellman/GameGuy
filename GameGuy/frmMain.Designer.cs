@@ -1,4 +1,4 @@
-﻿namespace GameGuy
+﻿namespace GameGUY
 {
     partial class frmMain
     {
