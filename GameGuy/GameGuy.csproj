@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
     <AssemblyName>GameGUY</AssemblyName>
     <RootNamespace>GameGUY</RootNamespace>
   </PropertyGroup>
