@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GameGUY
@@ -23,9 +24,9 @@ namespace GameGUY
             InitializeComponent();
 
             lblOutput.Text =
-                "gameGUY - Version 1.0 - (C)1998-2012 Jarred Capellman\nSelect a game from the menu to play";
+                "gameGUY - Version 1.0 - (C)1998-2019 Jarred Capellman\nSelect a game from the menu to play";
 
-            this.readRoms();
+            ReadRoms();
             InitMenu();
 
             this.KeyPress += new KeyPressEventHandler(frmMain_KeyPress);
@@ -46,22 +47,38 @@ namespace GameGUY
             this.Menu = mnu;
         }
 
-        private void readRoms()
+        private void ReadRoms()
         {
-            DirectoryInfo dInfo = new DirectoryInfo(Application.StartupPath + "\\ROMS");
+            var path = Application.StartupPath + "\\ROMS";
 
-            FileInfo[] files = dInfo.GetFiles();
-
-            GGInterpreter tmpApp;
-
-            foreach (FileInfo file in files)
+            if (!Directory.Exists(path))
             {
-                if (file.Extension.ToUpper() == ".GG")
-                {
-                    tmpApp = new GGInterpreter(file.FullName, desKey);
+                MessageBox.Show($"{path} does not exist, no games will be loaded", Application.ProductName);
 
-                    appDICT.Add(tmpApp.getProgramName(), tmpApp);
+                return;
+            }
+
+            var dInfo = new DirectoryInfo(path);
+
+            var files = dInfo.GetFiles();
+
+            if (!files.Any())
+            {
+                MessageBox.Show($"{path} contains no games", Application.ProductName);
+
+                return;
+            }
+
+            foreach (var file in files)
+            {
+                if (file.Extension.ToUpper() != ".GG")
+                {
+                    continue;
                 }
+
+                var tmpApp = new GGInterpreter(file.FullName, desKey);
+
+                appDICT.Add(tmpApp.getProgramName(), tmpApp);
             }
         }
 
