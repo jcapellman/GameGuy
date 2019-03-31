@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
+using GameGUY.Common;
 using GameGUY.ViewModels.Base;
 
 namespace GameGUY.ViewModels
@@ -75,9 +77,9 @@ namespace GameGUY.ViewModels
         {
             SetOutputWindow(string.Empty);
 
-            AppWindowTitle = "gameGUY";
+            AppWindowTitle = Constants.APP_NAME;
 
-            AddOutput("gameGUY - Version 1.0 - (C)1998-2019 Jarred Capellman\nSelect a game from the menu to play");
+            AddOutput($"{Constants.APP_NAME} - Version {Assembly.GetExecutingAssembly().GetName().Version} - {Constants.COPYRIGHT_STR}");
 
             ReadRoms();
 
@@ -89,7 +91,7 @@ namespace GameGUY.ViewModels
             var systemMnu = menu.MenuItems.Add("System");
             var startMnu = systemMnu.MenuItems.Add("Games");
 
-            foreach (string romName in appDICT.Keys)
+            foreach (var romName in appDICT.Keys)
             {
                 startMnu.MenuItems.Add(romName, runRom);
             }
@@ -144,7 +146,7 @@ namespace GameGUY.ViewModels
 
                 currentApp.reset();
 
-                AppWindowTitle = "gameGuy - " + currentApp.getProgramName();
+                AppWindowTitle = $"{Constants.APP_NAME} - {currentApp.getProgramName()}";
 
                 _romRunning = true;
 
@@ -178,6 +180,7 @@ namespace GameGUY.ViewModels
             }
 
             currentApp.sendInput(input);
+
             SetOutputWindow(currentApp.render());
         }
     }
