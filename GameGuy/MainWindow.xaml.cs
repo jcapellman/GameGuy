@@ -6,16 +6,32 @@ namespace GameGUY
 {
     public partial class MainWindow : Window
     {
+        private MainViewModel ViewModel => (MainViewModel)DataContext;
+
         public MainWindow()
         {
             InitializeComponent();
 
             DataContext = new MainViewModel();
+
+            ViewModel.Initialize();
+
+            KeyDown += MainWindow_KeyDown;
         }
 
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            ViewModel.HandleInput(e.Key.ToString());            
+        }
+
+        private void mnuExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void txtBxOutput_TextChanged(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            ViewModel.HandleInput(e.Key.ToString());
         }
     }
 }
