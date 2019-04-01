@@ -33,5 +33,10 @@ namespace GameGUY
         {
             ViewModel.HandleInput(e.Key.ToString());
         }
+
+        private void mnuRestart_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel.Restart();
+        }
     }
 }

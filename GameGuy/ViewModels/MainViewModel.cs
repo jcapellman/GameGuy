@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Windows.Forms;
 
 using GameGUY.Common;
 using GameGUY.ViewModels.Base;
@@ -13,12 +9,6 @@ namespace GameGUY.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private SortedDictionary<string, GameGUY.GGInterpreter> appDICT =
-            new SortedDictionary<string, GameGUY.GGInterpreter>();
-
-        private MainMenu menu = new MainMenu();
-
-        private static string desKey = "45^^!209";
         private GGInterpreter currentApp;
 
         private string _appWindowTitle;
@@ -80,82 +70,19 @@ namespace GameGUY.ViewModels
             AppWindowTitle = Constants.APP_NAME;
 
             AddOutput($"{Constants.APP_NAME} - Version {Assembly.GetExecutingAssembly().GetName().Version} - {Constants.COPYRIGHT_STR}");
-
-            ReadRoms();
-
-            InitMenu();
-        }
-
-        private void InitMenu()
-        {
-            var systemMnu = menu.MenuItems.Add("System");
-            var startMnu = systemMnu.MenuItems.Add("Games");
-
-            foreach (var romName in appDICT.Keys)
-            {
-                startMnu.MenuItems.Add(romName, runRom);
-            }
-
-           //systemMnu.MenuItems.Add("Exit", exit_Click);
-        }
-
-        private void ReadRoms()
-        {
-            var path = Application.StartupPath + "\\ROMS";
-
-            if (!Directory.Exists(path))
-            {
-                AddOutput($"{path} does not exist, no games will be loaded...");
-
-                return;
-            }
-
-            var dInfo = new DirectoryInfo(path);
-
-            var files = dInfo.GetFiles();
-
-            if (!files.Any())
-            {
-                AddOutput($"{path} contains no games...");
-
-                return;
-            }
-
-            foreach (var file in files)
-            {
-                if (file.Extension.ToUpper() != ".GG")
-                {
-                    continue;
-                }
-
-                var tmpApp = new GGInterpreter(file.FullName, desKey);
-
-                appDICT.Add(tmpApp.getProgramName(), tmpApp);
-            }
-
-            AddOutput($"Loaded {appDICT.Count}...");
         }
 
         private void runRom(object sender, EventArgs e)
         {
             SetOutputWindow(string.Empty);
 
-            if (appDICT.ContainsKey(sender.ToString().Substring(53)))
-            {
-                currentApp = appDICT[sender.ToString().Substring(53)];
+            currentApp.reset();
 
-                currentApp.reset();
+            AppWindowTitle = $"{Constants.APP_NAME} - {currentApp.getProgramName()}";
 
-                AppWindowTitle = $"{Constants.APP_NAME} - {currentApp.getProgramName()}";
+            _romRunning = true;
 
-                _romRunning = true;
-
-                UpdateDisplay(currentApp.render());
-            }
-            else
-            {
-                MessageBox.Show("Error!");
-            }
+            UpdateDisplay(currentApp.render());
         }
 
         private void UpdateDisplay(string toRenderStr)
@@ -182,6 +109,11 @@ namespace GameGUY.ViewModels
             currentApp.sendInput(input);
 
             SetOutputWindow(currentApp.render());
+        }
+
+        public void Restart()
+        {
+
         }
     }
 }

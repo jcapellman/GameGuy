@@ -5,15 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameGUY"
         mc:Ignorable="d"
+        Background="Black"
+        Foreground="LightGray"
         Title="{Binding AppWindowTitle, Mode=TwoWay}" Height="600" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Menu Grid.Row="0"></Menu>
 
-        <TextBox Grid.Row="1" Text="{Binding OutputWindowText, Mode=TwoWay}" />
+        <Menu Grid.Row="0">
+            <MenuItem Header="System">
+                <MenuItem Header="Restart" Click="mnuRestart_Click" />
+                <MenuItem Header="Exit" Click="mnuExit_Click" />
+            </MenuItem>
+        </Menu>
+
+        <TextBox Grid.Row="1" Background="Black" Foreground="LightGray" Text="{Binding OutputWindowText, Mode=TwoWay}" />
     </Grid>
 </Window>

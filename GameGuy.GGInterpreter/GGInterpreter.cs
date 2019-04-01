@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-
+    
 using GameGuy.GGCrypt;
 
 namespace GameGUY {
