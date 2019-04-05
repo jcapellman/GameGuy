@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Styles\MainStyles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Styles\MainStyles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Styles\MainStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GameGuy.GGCrypt\GameGuy.GGCrypt.csproj" />
     <ProjectReference Include="..\GameGuy.GGInterpreter\GameGuy.GGInterpreter.csproj" />
   </ItemGroup>
